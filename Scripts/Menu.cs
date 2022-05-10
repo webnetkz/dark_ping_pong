@@ -8,10 +8,14 @@ public class Menu : MonoBehaviour
   public GameObject settingsPanel;
   public GameObject ball;
   public float startBallSpeed = 350f;
+  private bool showMenu;
+
+
 
   void Start()
   {
     ball.SetActive(false);
+    showMenu = false;
   }
 
   public void ExitMyGame()
@@ -51,5 +55,21 @@ public class Menu : MonoBehaviour
 		Vector2 direction = new Vector2(1,Random.Range(1.5f, -1.5f)); // Стартавая рандомное направление движения
 		if(Random.Range(0,2) == 1) direction.x *= -1;
 		ball.GetComponent<Rigidbody2D>().AddForce(direction * startBallSpeed);
+  }
+
+  private void Update()
+  {
+    if(Input.GetKeyDown(KeyCode.Escape))
+    {
+      if(showMenu)
+      {
+        showMenu = false;
+        menuPanel.SetActive(true);
+        Time.timeScale = 0;
+      } else {
+        showMenu = true;
+        ContinueMyGame();
+      }
+    }
   }
 }

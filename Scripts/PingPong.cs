@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PingPong : MonoBehaviour {
 
@@ -53,6 +54,10 @@ public class PingPong : MonoBehaviour {
 		player.position = new Vector2(player.position.x, 0);
 		ball.position = new Vector2(0, 0);
 		if(x > 0) playerScore++; else if(x < 0) botScore++;
+
+    if(playerScore == 10 || botScore == 10) {
+      SceneManager.LoadScene(0);
+    }
 
     if(go)
     {
