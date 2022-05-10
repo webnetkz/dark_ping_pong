@@ -32,7 +32,6 @@ public class PingPong : MonoBehaviour {
     // Управлениея пользователя
 		if(Input.acceleration.x > 0.0f && player.position.x < playerLimitX)
 		{
-      Debug.Log(accelerationX);
 			player.Translate(-Vector2.up * playerSpeed * Time.deltaTime);
 		}
 		else if(Input.acceleration.x < 0.0f && player.position.x > -playerLimitX)
