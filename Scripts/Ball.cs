@@ -5,6 +5,7 @@ public class Ball : MonoBehaviour {
 
 	public PingPong pingPomg;
   public AudioSource clip;
+  public Rigidbody _cam;
 
   void OnCollisionEnter2D(Collision2D coll)
   {
