@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4906422}
   - component: {fileID: 4906421}
   m_Layer: 5
-  m_Name: PlayerScore
+  m_Name: BotScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1714,7 +1714,7 @@ RectTransform:
   m_GameObject: {fileID: 758829605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 2019744752}
   - {fileID: 748556788}
@@ -2067,7 +2067,7 @@ GameObject:
   - component: {fileID: 1147303488}
   - component: {fileID: 1147303487}
   m_Layer: 5
-  m_Name: BotScore
+  m_Name: PlayerScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2381,7 +2381,7 @@ RectTransform:
   m_GameObject: {fileID: 1411944202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 1751701547}
   - {fileID: 1506365736}
@@ -2393,7 +2393,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -47.559998, y: 134.18}
+  m_SizeDelta: {x: -422.88, y: 161.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1411944204
 MonoBehaviour:
@@ -2504,7 +2504,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 24e94b9b233179e4fbe07e966c6ba912, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

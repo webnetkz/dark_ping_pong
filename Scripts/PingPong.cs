@@ -27,16 +27,20 @@ public class PingPong : MonoBehaviour {
 	void Update () 
 	{
     accelerationX = Input.acceleration.x;
-    
+
+    //Debug.Log(accelerationX);
+    Debug.Log(accelerationX);
 
     // Управлениея пользователя
 		if(Input.acceleration.x > 0.0f && player.position.x < playerLimitX)
 		{
-			player.Translate(-Vector2.up * playerSpeed * Time.deltaTime);
+      float pos = (float)System.Math.Round(Input.acceleration.x * playerLimitX * 1.2f, 1);
+      player.position = new Vector2(pos, player.position.y);
 		}
 		else if(Input.acceleration.x < 0.0f && player.position.x > -playerLimitX)
 		{
-			player.Translate(Vector2.up * playerSpeed * Time.deltaTime);
+      float pos = (float)System.Math.Round(Input.acceleration.x * playerLimitX * 1.2f, 1);
+      player.position = new Vector2(pos, player.position.y);
 		}
 
     // Управление ботом
