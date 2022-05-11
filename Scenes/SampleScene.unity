@@ -1197,7 +1197,7 @@ MonoBehaviour:
   startBallSpeed: 350
   playerSpeed: 10
   botSpeed: 2.5
-  playerLimitX: 2.5
+  playerLimitX: 3.5
   playerScoreText: {fileID: 4906421}
   botScoreText: {fileID: 1147303487}
 --- !u!20 &519420031

@@ -18,6 +18,7 @@ public class PingPong : MonoBehaviour {
 	private int botScore;
   private bool go;
   private float accelerationX;
+  private float playerPositionX;
 
 	void Start () 
 	{
@@ -31,17 +32,13 @@ public class PingPong : MonoBehaviour {
     //Debug.Log(accelerationX);
     Debug.Log(accelerationX);
 
+    playerPositionX = accelerationX * playerLimitX;
+
+
+    player.position = new Vector2(playerPositionX, player.position.y);
+
     // Управлениея пользователя
-		if(Input.acceleration.x > 0.0f && player.position.x < playerLimitX)
-		{
-      float pos = (float)System.Math.Round(Input.acceleration.x * playerLimitX * 1.2f, 1);
-      player.position = new Vector2(pos, player.position.y);
-		}
-		else if(Input.acceleration.x < 0.0f && player.position.x > -playerLimitX)
-		{
-      float pos = (float)System.Math.Round(Input.acceleration.x * playerLimitX * 1.2f, 1);
-      player.position = new Vector2(pos, player.position.y);
-		}
+
 
     // Управление ботом
 		if(ball.position.y < 0 || ball.position.y > 0)
