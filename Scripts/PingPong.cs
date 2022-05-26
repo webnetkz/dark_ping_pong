@@ -16,9 +16,9 @@ public class PingPong : MonoBehaviour {
 	public Text botScoreText;
 	private int playerScore;
 	private int botScore;
-  private bool go;
-  private float accelerationX;
-  private float playerPositionX;
+	private bool go;
+	private float accelerationX;
+	private float playerPositionX;
 
 	void Start () 
 	{
