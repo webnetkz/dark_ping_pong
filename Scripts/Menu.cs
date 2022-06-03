@@ -14,6 +14,7 @@ public class Menu : MonoBehaviour
 
   void Start()
   {
+    Time.timeScale = 0;
     ball.SetActive(false);
     showMenu = false;
   }

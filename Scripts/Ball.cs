@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour {
-
-	public PingPong pingPomg;
   public AudioSource clip;
 
   void OnCollisionEnter2D(Collision2D coll)
@@ -11,8 +11,4 @@ public class Ball : MonoBehaviour {
     clip.Play();
   }
 
-	void OnBecameInvisible () 
-	{
-		pingPomg.Reset(transform.position.x);
-	}
 }
